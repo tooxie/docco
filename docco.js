@@ -59,6 +59,7 @@
     if (config == null) {
       config = {};
     }
+    code = code.replace(/\/\*([\s\S]*?)\*\/[\n\s]*/g, '');
     lines = code.split('\n');
     sections = [];
     lang = getLanguage(source, config);
